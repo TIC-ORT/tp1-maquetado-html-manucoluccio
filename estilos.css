@@ -1,0 +1,140 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Asegura que el footer quede abajo */
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Cabecera */
+.cabecera {
+  background-color: #FFD580;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  background-color: #FDC75B;
+}
+
+.descripcion {
+  flex-grow: 1;
+}
+
+.titulo {
+  width: 50%;
+  height: 10px;
+  background-color: #FDB649;
+  margin-bottom: 10px;
+}
+
+.linea {
+  height: 10px;
+  background-color: white;
+  margin: 10px 0;
+  width: 90%;
+}
+
+.linea.corta {
+  width: 40%;
+}
+
+/* Contenido principal */
+main.contenido {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  padding: 60px;
+  justify-items: center;
+}
+
+.caja {
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.caja::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 12px;
+  width: 100%;
+  opacity: 0.6;
+}
+
+.caja.celeste {
+  background-color: #B2EBF2;
+}
+.caja.celeste::before {
+  background-color: #80DEEA;
+}
+
+.caja.coral {
+  background-color: #FFAB91;
+}
+.caja.coral::before {
+  background-color: #FF7043;
+}
+
+.caja.amarillo {
+  background-color: #FFE082;
+}
+.caja.amarillo::before {
+  background-color: #FFD54F;
+}
+
+.cuadro {
+  width: 50px;
+  height: 50px;
+}
+
+.cuadro.celeste {
+  background-color: #80DEEA;
+}
+.cuadro.coral {
+  background-color: #FF7043;
+}
+.cuadro.amarillo {
+  background-color: #FFD54F;
+}
+
+/* Pie de página */
+.pie {
+  background-color: #E0E0E0;
+  display: flex;
+  justify-content: space-around;
+  padding: 40px 0;
+}
+
+.columna {
+  width: 150px;
+  height: 80px;
+  background: repeating-linear-gradient(
+    to bottom,
+    #ccc,
+    #ccc 10px,
+    transparent 10px,
+    transparent 20px
+  );
+}
